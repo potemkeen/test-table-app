@@ -1,0 +1,93 @@
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.table{
+    margin-top: 16px;
+    width: 50vw;
+    min-width: 1000px;
+    display: block;
+    empty-cells: show;
+    border-spacing: 0;
+    border: 1px solid;
+}
+
+.table table {
+    width: 100%;
+}
+
+.table thead{
+    background-color: #f1f1f1;
+    position:relative;
+    display: block;
+    width:100%;
+}
+
+.table__tbody-container {
+    overflow-y:scroll;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.table tbody{
+    display: block;
+    position:relative;
+    width:100%;
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.table__header {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table__footer {
+    display: flex;
+    justify-content: center;
+    padding: 16px 24px;
+}
+
+.table__count-info {
+    margin-left: auto;
+}
+
+.table tr{
+    width: 100%;
+    display:flex;
+}
+
+.table td,.table th{
+    flex-basis:100%;
+    flex-grow:2;
+    display: block;
+    padding: 8px 16px;
+    text-align:left;
+}
+
+.table tbody tr:nth-child(even){
+    background-color: rgba(130,130,170,0.1);
+}
+
+th.small-col,
+td.small-col {
+    flex-basis: 30%;
+}
+
+button {
+    background: none;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.pagination {
+    display: flex;
+}
+
+.pagination__page--active {
+    background: lightgray;
+}

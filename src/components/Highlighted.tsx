@@ -9,7 +9,7 @@ const Highlighted: React.FC<HighlightedProps> = ({text = '', highlight = ''}) =>
     if (!highlight.trim()) {
         return <span>{text}</span>
     }
-    const regex = new RegExp(`(${_.escapeRegExp(highlight)})`, 'gi')
+    const regex = new RegExp(`(${highlight})`, 'gi')
     const parts = text.split(regex)
     return (
         <span>
@@ -20,4 +20,4 @@ const Highlighted: React.FC<HighlightedProps> = ({text = '', highlight = ''}) =>
     )
 }
 
-export default HighlightText;
+export default Highlighted;
